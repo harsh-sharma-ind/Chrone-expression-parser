@@ -55,8 +55,10 @@ const croneParser = (text, mini, maxi) => {
   }
 };
 
+var regExp = /[a-zA-Z]/g;
+
 for (var i = 0; i < s.length; i++) {
-  if (s[i].includes("/bin")) {
+  if (regExp.test(s[i])) {
     console.log("command :", s[i]);
   } else {
     switch (i) {
